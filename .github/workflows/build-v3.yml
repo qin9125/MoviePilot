@@ -175,8 +175,8 @@ jobs:
             MOVIEPILOT_PLUGINS_REF=${{ steps.payloads.outputs.plugins_revision }}
             MOVIEPILOT_RESOURCES_REF=${{ steps.payloads.outputs.resources_revision }}
             MOVIEPILOT_PYTHON_VARIANT=standard
-          cache-from: type=gha,scope=moviepilot-v3-standard-docker-amd64,version=2
-          cache-to: type=gha,scope=moviepilot-v3-standard-docker-amd64,mode=max,version=2
+          cache-from: type=gha,scope=moviepilot-v3-standard-docker-amd64-test,version=2
+          cache-to: type=gha,scope=moviepilot-v3-standard-docker-amd64-test,mode=max,version=2
 
       - name: Scan amd64 candidate vulnerabilities
         uses: aquasecurity/trivy-action@v0.36.0
@@ -207,8 +207,8 @@ jobs:
             MOVIEPILOT_PLUGINS_REF=${{ steps.payloads.outputs.plugins_revision }}
             MOVIEPILOT_RESOURCES_REF=${{ steps.payloads.outputs.resources_revision }}
             MOVIEPILOT_PYTHON_VARIANT=standard
-          cache-from: type=gha,scope=moviepilot-v3-standard-docker-arm64,version=2
-          cache-to: type=gha,scope=moviepilot-v3-standard-docker-arm64,mode=max,version=2
+          cache-from: type=gha,scope=moviepilot-v3-standard-docker-arm64-test,version=2
+          cache-to: type=gha,scope=moviepilot-v3-standard-docker-arm64-test,mode=max,version=2
 
       - name: Scan arm64 candidate vulnerabilities
         uses: aquasecurity/trivy-action@v0.36.0
